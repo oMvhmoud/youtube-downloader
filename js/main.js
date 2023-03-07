@@ -59,18 +59,6 @@ const regexChecker = new RegExp(
       return 0;
     });
   
-    $("#downloadTable").append(`<tr><th scope="row">${(rowIdx + 1, rowIdx++)}</th>
-      <td>${urls[0].name}</td>
-      <td>${urls[0].subname}p</td>
-      <td>${
-        urls[0].filesize
-          ? Math.round(urls[0].filesize / 1024 / 1024) + " MB"
-          : "UNKNOWN"
-      }</td>
-      <td><a type="button" class="btn btn-success ripple-surface" href="${
-        urls[0].url
-      }">Download</a></td></tr>`);
-  
     audioVideos.forEach((url) => {
       $("#downloadTable").append(`<tr><th scope="row">${
         (rowIdx + 1, rowIdx++)
